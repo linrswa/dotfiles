@@ -1,0 +1,10 @@
+{
+    "diagnostics.disable": [
+        "param-type-mismatch",
+        "unused-function",
+        "unused-local"
+    ],
+    "diagnostics.globals": [
+        "vim"
+    ]
+}
