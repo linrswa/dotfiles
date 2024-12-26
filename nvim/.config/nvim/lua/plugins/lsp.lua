@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "dockerls", "pright" },
+        ensure_installed = { "lua_ls", "dockerls", "pyright" },
         automatic_installation = true
       })
     end
@@ -35,5 +35,8 @@ return {
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
       vim.keymap.set({'n', 'v'}, '<space>ca', vim.lsp.buf.code_action, {})
     end
+  },
+  {
+    "github/copilot.vim"
   }
 }
