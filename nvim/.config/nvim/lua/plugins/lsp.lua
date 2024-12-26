@@ -31,7 +31,13 @@ return {
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({})
       lspconfig.dockerls.setup({})
-      lspconfig.pyright.setup({})
+      lspconfig.pyright.setup({
+        settings = {
+          python = {
+            pythonPath = vim.fn.exepath("python"),
+          },
+        },
+      })
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
       vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, {})
     end,
