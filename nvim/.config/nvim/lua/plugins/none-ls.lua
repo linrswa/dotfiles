@@ -24,6 +24,7 @@ return {
         }),
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.shfmt.with({ extra_args = { "-i", "4" } }),
+        null_ls.builtins.diagnostics.hadolint,
       },
     })
 
