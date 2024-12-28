@@ -18,6 +18,7 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = {
       {
+        "saghen/blink.cmp",
         "folke/lazydev.nvim",
         ft = "lua",
         opts = {
@@ -27,17 +28,28 @@ return {
         },
       },
     },
-    config = function()
-      local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({})
-      lspconfig.dockerls.setup({})
-      lspconfig.pyright.setup({
-        settings = {
-          python = {
-            pythonPath = vim.fn.exepath("python"),
+    opts = {
+      servers = {
+        lua_ls = {},
+        dockerls = {},
+        bashls = {
+          filetypes = { "bash", "zsh", "sh" },
+        },
+        pyright = {
+          settings = {
+            python = {
+              pythonPath = vim.fn.exepath("python"),
+            },
           },
         },
-      })
+      },
+    },
+    config = function(_, opts)
+      local lspconfig = require("lspconfig")
+      for server, config in pairs(opts.servers) do
+        config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
+        lspconfig[server].setup(config)
+      end
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
       vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, {})
     end,
