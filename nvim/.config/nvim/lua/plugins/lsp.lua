@@ -42,6 +42,8 @@ return {
             },
           },
         },
+        clangd = {},
+        cmake = {},
       },
     },
     config = function(_, opts)
