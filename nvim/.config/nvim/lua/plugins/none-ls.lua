@@ -28,6 +28,6 @@ return {
       },
     })
 
-    vim.keymap.set("n", "<space>ff", vim.lsp.buf.format, {})
+    vim.keymap.set("n", "<space>gf", vim.lsp.buf.format, {})
   end,
 }
