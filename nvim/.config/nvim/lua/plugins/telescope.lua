@@ -27,6 +27,7 @@ return {
 
     telescope.load_extension("fzf")
     telescope.load_extension("ui-select")
+    telescope.load_extension("noice")
 
     local builtin = require("telescope.builtin")
     vim.keymap.set("n", "<space>fh", builtin.help_tags)
