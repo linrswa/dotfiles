@@ -34,6 +34,7 @@ return {
     vim.keymap.set("n", "<space>ff", builtin.find_files)
     vim.keymap.set("n", "<space>fb", builtin.buffers)
     vim.keymap.set("n", "<space>fs", builtin.lsp_document_symbols)
+    vim.keymap.set("n", "<space>fr", builtin.lsp_references)
     vim.keymap.set("n", "<space>en", function()
       require("telescope.builtin").find_files({
         cwd = vim.fn.stdpath("config"),
