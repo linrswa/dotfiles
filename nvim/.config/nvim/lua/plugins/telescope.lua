@@ -30,21 +30,23 @@ return {
     telescope.load_extension("noice")
 
     local builtin = require("telescope.builtin")
-    vim.keymap.set("n", "<space>fh", builtin.help_tags)
-    vim.keymap.set("n", "<space>ff", builtin.find_files)
-    vim.keymap.set("n", "<space>fb", builtin.buffers)
-    vim.keymap.set("n", "<space>fs", builtin.lsp_document_symbols)
-    vim.keymap.set("n", "<space>fr", builtin.lsp_references)
+    vim.keymap.set("n", "<space>fh", builtin.help_tags, { desc = "Telescope find help files" })
+    vim.keymap.set("n", "<space>ff", builtin.find_files, { desc = "Telescope find files in current dir" })
+    vim.keymap.set("n", "<space>fb", builtin.buffers, { desc = "Telescope find buffers" })
+    vim.keymap.set("n", "<space>fs", builtin.lsp_document_symbols, { desc = "Telescope find symbols" })
+    vim.keymap.set("n", "<space>fr", builtin.lsp_references, { desc = "Telescope find references" })
+    vim.keymap.set("n", "<space>fc", builtin.current_buffer_fuzzy_find, { desc = "Telescope find current buffer" })
+    vim.keymap.set("n", "<space>fk", builtin.keymaps, { desc = "Telescope find keymaps" })
     vim.keymap.set("n", "<space>en", function()
       require("telescope.builtin").find_files({
         cwd = vim.fn.stdpath("config"),
       })
-    end)
+    end, { desc = "Telescope find neovim lua config files" })
     vim.keymap.set("n", "<space>ep", function()
       require("telescope.builtin").find_files({
         cwd = vim.fs.joinpath(vim.fn.stdpath("data"), "lazy"),
       })
-    end)
+    end, { desc = "Telescope find lazy plugins" })
     require("config.telescope.multigrep").setup()
   end,
 }
