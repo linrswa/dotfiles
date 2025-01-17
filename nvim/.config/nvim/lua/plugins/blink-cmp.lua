@@ -15,6 +15,15 @@ return {
           auto_show = true,
           auto_show_delay_ms = 100,
         },
+        menu = {
+          -- nvim-cmp style menu
+          draw = {
+            columns = {
+              { "label", "label_description", gap = 1 },
+              { "kind_icon" },
+            },
+          },
+        },
       },
     },
   },
