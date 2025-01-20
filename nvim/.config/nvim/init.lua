@@ -11,6 +11,7 @@ vim.keymap.set("v", "<space>x", ":lua<CR>")
 
 vim.keymap.set("n", "<space>j", "<cmd>cnext<CR>")
 vim.keymap.set("n", "<space>k", "<cmd>cprev<CR>")
+vim.keymap.set("n", "<space>nh", "<cmd>nohl<CR>")
 
 -- Highlight when yanking (copying) text
 -- Try it with 'yap' in nomral mode
