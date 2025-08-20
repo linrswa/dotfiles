@@ -52,6 +52,9 @@ return {
         config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
         lspconfig[server].setup(config)
       end
+      require('render-markdown').setup({
+        completions = { blink = { enabled = true } },
+      })
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
       vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, {})
       vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, {})
