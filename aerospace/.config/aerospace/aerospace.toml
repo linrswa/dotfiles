@@ -199,3 +199,6 @@ run = "layout floating"
 if.app-name-regex-substring = 'finder'
 run = "layout floating"
 
+[[on-window-detected]]
+if.app-name-regex-substring = 'CopilotForXcode'
+run = "layout floating"
