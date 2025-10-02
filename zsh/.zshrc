@@ -1,6 +1,8 @@
 eval "$(starship init zsh)"
 source <(fzf --zsh)
 set -o vi
+# 10ms for key sequences
+KEYTIMEOUT=1
 
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
