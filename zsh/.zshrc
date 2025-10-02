@@ -48,3 +48,8 @@ unset __conda_setup
 export VCPKG_ROOT="/Users/rswa/vcpkg"
 export PATH="$VCPKG_ROOT:$PATH"
 export DISPLAY=:0
+eval "$(mise activate zsh)"
+
+. "$HOME/.local/bin/env"
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uv generate-shell-completion zsh)"

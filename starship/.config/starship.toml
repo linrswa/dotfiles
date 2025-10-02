@@ -8,6 +8,7 @@ $git_branch\
 $git_status\
 [](fg:#394260 bg:#212736)\
 $conda\
+$python\
 $rust\
 $golang\
 [](fg:#212736 bg:#1d2230)\
@@ -43,7 +44,7 @@ format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
 [golang]
 symbol = ""
-style = "bg:#212736"
+style = "bg:#212737"
 format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
 [conda]
@@ -51,6 +52,11 @@ symbol = '🅒  '
 style = 'bold green'
 format = '[$symbol$environment](dimmed green) '
 ignore_base = true
+
+[python]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) (\($virtualenv\)) ](fg:#769ff0 bg:#212736)]($style)'
 
 [time]
 disabled = false
