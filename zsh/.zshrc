@@ -55,3 +55,4 @@ eval "$(mise activate zsh)"
 . "$HOME/.local/bin/env"
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uv generate-shell-completion zsh)"
+export PATH=/Library/Frameworks/GStreamer.framework/Versions/Current/bin:$PATH
