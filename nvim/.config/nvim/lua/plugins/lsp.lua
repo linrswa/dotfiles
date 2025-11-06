@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "dockerls", "pyright" },
+        ensure_installed = { "lua_ls", "dockerls", "pyright", "bashls", "clangd", "cmake" },
         automatic_installation = true,
       })
     end,

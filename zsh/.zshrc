@@ -30,6 +30,7 @@ alias lg='lazygit'
 alias vim='nvim'
 alias vi='nvim'
 alias cat='bat'
+alias server='ssh server'
 
 
 # >>> conda initialize >>>

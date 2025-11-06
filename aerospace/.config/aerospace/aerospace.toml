@@ -184,12 +184,12 @@ if.app-id = 'company.thebrowser.Browser'
 run = "move-node-to-workspace web"
 
 [[on-window-detected]]
-if.app-id = 'org.godotengine.godot'
-run = "layout floating"
-
-[[on-window-detected]]
 if.app-id = 'com.openai.chat'
 run = "move-node-to-workspace chat"
+
+[[on-window-detected]]
+if.app-id = 'org.godotengine.godot'
+run = "layout floating"
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'line'
@@ -202,3 +202,8 @@ run = "layout floating"
 [[on-window-detected]]
 if.app-name-regex-substring = 'CopilotForXcode'
 run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = 'com.realvnc.vncviewer'
+run = "layout floating"
+
