@@ -122,6 +122,7 @@ alt-c = 'workspace chat'
 alt-w = 'workspace web'
 alt-0 = 'workspace sub'
 alt-g = 'workspace godot'
+alt-q = 'workspace quick'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -135,6 +136,7 @@ alt-shift-c = 'move-node-to-workspace chat'
 alt-shift-w = 'move-node-to-workspace web'
 alt-shift-0 = 'move-node-to-workspace sub'
 alt-shift-g = 'move-node-to-workspace godot'
+alt-shift-q = 'move-node-to-workspace quick'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
