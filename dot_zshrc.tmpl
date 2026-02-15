@@ -1,5 +1,15 @@
+{{- if eq .chezmoi.os "linux" }}
+if [[ "$TERM" == "xterm-ghostty" ]]; then
+  export TERM="xterm-256color"
+fi
+
+{{ end -}}
 eval "$(starship init zsh)"
+{{- if eq .chezmoi.os "darwin" }}
 source <(fzf --zsh)
+{{- else }}
+source ~/.fzf.zsh
+{{- end }}
 set -o vi
 # 10ms for key sequences
 KEYTIMEOUT=1
@@ -9,8 +19,11 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
 
 # Activate syntax highlighting
+{{- if eq .chezmoi.os "darwin" }}
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+{{- else }}
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+{{- end }}
 
 # Disable underline
 (( ${+ZSH__HIGHTLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
@@ -18,21 +31,30 @@ ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
 # Activate autosuggestions
+{{- if eq .chezmoi.os "darwin" }}
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+{{- else }}
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+{{- end }}
 set completion-ignore-case on
 
 # alias ls='ls --color=auto'
 alias ls='lsd'
 alias la='ls -al'
 alias ll='ls -al'
-alias cleanXcode='rm -rf ~/Library/Developer/Xcode/DerivedData'
 alias lg='lazygit'
 alias vim='nvim'
 alias vi='nvim'
+{{- if eq .chezmoi.os "darwin" }}
 alias cat='bat'
+alias cleanXcode='rm -rf ~/Library/Developer/Xcode/DerivedData'
 alias server='ssh server'
 alias ccpass='claude --dangerously-skip-permissions'
+{{- else }}
+alias cat='batcat'
+{{- end }}
 
+{{- if eq .chezmoi.os "darwin" }}
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -52,7 +74,9 @@ unset __conda_setup
 export VCPKG_ROOT="/Users/rswa/vcpkg"
 export PATH="$VCPKG_ROOT:$PATH"
 export DISPLAY=:0
+{{- end }}
 eval "$(mise activate zsh)"
+{{- if eq .chezmoi.os "darwin" }}
 
 . "$HOME/.local/bin/env"
 eval "$(uv generate-shell-completion zsh)"
@@ -68,3 +92,4 @@ export PATH="/Users/rswa/.antigravity/antigravity/bin:$PATH"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+{{- end }}

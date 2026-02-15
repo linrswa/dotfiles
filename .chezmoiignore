@@ -1,18 +1,8 @@
 # ==========================================
-# 舊 stow package 目錄（暫時忽略，之後遷移時移除）
+# tmux plugins（由 TPM 管理，不由 chezmoi 同步）
 # ==========================================
-nvim
-nvim/**
-zsh
-zsh/**
-tmux
-tmux/**
-starship
-starship/**
-aerospace
-aerospace/**
-zsh_starship_for_linux
-zsh_starship_for_linux/**
+.config/tmux/plugins
+.config/tmux/plugins/**
 
 # ==========================================
 # .claude 運行時/暫存資料（永遠不同步）
@@ -66,3 +56,4 @@ zsh_starship_for_linux/**
 README.md
 LICENSE
 .DS_Store
+macos-chezmoi-sync-prompt.md
