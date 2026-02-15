@@ -1,0 +1,73 @@
+{
+  "version": 2,
+  "plugins": {
+    "github@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/linrswa/.claude/plugins/cache/claude-plugins-official/github/2cd88e7947b7",
+        "version": "2cd88e7947b7",
+        "installedAt": "2026-01-08T10:40:47.490Z",
+        "lastUpdated": "2026-02-07T08:47:53.648Z"
+      }
+    ],
+    "frontend-design@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/linrswa/.claude/plugins/cache/claude-plugins-official/frontend-design/2cd88e7947b7",
+        "version": "2cd88e7947b7",
+        "installedAt": "2026-01-26T05:53:40.846Z",
+        "lastUpdated": "2026-02-07T08:47:53.653Z",
+        "gitCommitSha": "e30768372b4150ca1bc0839d93283e8edc30d60d"
+      }
+    ],
+    "doc-agent@local": [
+      {
+        "scope": "user",
+        "installPath": "/home/linrswa/.claude/plugins/cache/local/doc-agent/0.3.2",
+        "version": "0.3.2",
+        "installedAt": "2026-01-28T03:56:55.263Z",
+        "lastUpdated": "2026-02-12T04:40:09.821Z"
+      }
+    ],
+    "context7@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/linrswa/.claude/plugins/cache/claude-plugins-official/context7/2cd88e7947b7",
+        "version": "2cd88e7947b7",
+        "installedAt": "2026-01-30T02:34:11.161Z",
+        "lastUpdated": "2026-02-07T08:47:53.662Z",
+        "gitCommitSha": "27d2b86d72da27c64585150857cee8472ad47abb"
+      }
+    ],
+    "code-review@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/linrswa/.claude/plugins/cache/claude-plugins-official/code-review/2cd88e7947b7",
+        "version": "2cd88e7947b7",
+        "installedAt": "2026-01-30T02:36:21.083Z",
+        "lastUpdated": "2026-02-07T08:47:53.657Z",
+        "gitCommitSha": "27d2b86d72da27c64585150857cee8472ad47abb"
+      }
+    ],
+    "code-simplifier@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/linrswa/.claude/plugins/cache/claude-plugins-official/code-simplifier/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-01-30T02:36:32.117Z",
+        "lastUpdated": "2026-01-30T02:36:32.117Z",
+        "gitCommitSha": "27d2b86d72da27c64585150857cee8472ad47abb"
+      }
+    ],
+    "ralph@local": [
+      {
+        "scope": "user",
+        "installPath": "/home/linrswa/.claude/plugins/cache/local/ralph/0.2.1",
+        "version": "0.2.1",
+        "installedAt": "2026-02-12T05:57:07.680Z",
+        "lastUpdated": "2026-02-13T08:50:26.908Z",
+        "gitCommitSha": "d60be46e6dfc460c0268e0efcd598b137449c447"
+      }
+    ]
+  }
+}

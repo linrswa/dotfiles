@@ -1,0 +1,68 @@
+# ==========================================
+# 舊 stow package 目錄（暫時忽略，之後遷移時移除）
+# ==========================================
+nvim
+nvim/**
+zsh
+zsh/**
+tmux
+tmux/**
+starship
+starship/**
+aerospace
+aerospace/**
+zsh_starship_for_linux
+zsh_starship_for_linux/**
+
+# ==========================================
+# .claude 運行時/暫存資料（永遠不同步）
+# ==========================================
+.claude/.credentials.json
+.claude/projects
+.claude/projects/**
+.claude/debug
+.claude/debug/**
+.claude/todos
+.claude/todos/**
+.claude/file-history
+.claude/file-history/**
+.claude/session-env
+.claude/session-env/**
+.claude/history.jsonl
+.claude/shell-snapshots
+.claude/shell-snapshots/**
+.claude/paste-cache
+.claude/paste-cache/**
+.claude/cache
+.claude/cache/**
+.claude/stats-cache.json
+.claude/config
+.claude/config/**
+.claude/plugins/cache
+.claude/plugins/cache/**
+.claude/plugins/install-counts-cache.json
+.claude/plugins/marketplaces
+.claude/plugins/marketplaces/**
+.claude/telemetry
+.claude/telemetry/**
+.claude/statsig
+.claude/statsig/**
+.claude/ide
+.claude/ide/**
+.claude/downloads
+.claude/downloads/**
+.claude/plans
+.claude/plans/**
+.claude/tasks
+.claude/tasks/**
+.claude/command
+.claude/command/**
+.claude/marketplaces
+.claude/marketplaces/**
+
+# ==========================================
+# 雜項
+# ==========================================
+README.md
+LICENSE
+.DS_Store
