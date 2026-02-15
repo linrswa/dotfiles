@@ -1,8 +1,9 @@
 # ==========================================
-# tmux plugins（由 TPM 管理，不由 chezmoi 同步）
+# 由外部工具管理，不由 chezmoi 同步
 # ==========================================
 .config/tmux/plugins
 .config/tmux/plugins/**
+.config/nvim/lazy-lock.json
 
 # ==========================================
 # .claude 運行時/暫存資料（永遠不同步）
