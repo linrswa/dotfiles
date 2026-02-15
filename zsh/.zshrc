@@ -31,6 +31,7 @@ alias vim='nvim'
 alias vi='nvim'
 alias cat='bat'
 alias server='ssh server'
+alias ccpass='claude --dangerously-skip-permissions'
 
 
 # >>> conda initialize >>>
@@ -57,3 +58,13 @@ eval "$(mise activate zsh)"
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uv generate-shell-completion zsh)"
 export PATH=/Library/Frameworks/GStreamer.framework/Versions/Current/bin:$PATH
+
+# Added by Antigravity
+export PATH="/Users/rswa/.antigravity/antigravity/bin:$PATH"
+
+# bun completions
+[ -s "/Users/rswa/.bun/_bun" ] && source "/Users/rswa/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
