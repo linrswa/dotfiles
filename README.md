@@ -6,7 +6,7 @@ Personal dotfiles managed by [chezmoi](https://www.chezmoi.io/), with OS-specifi
 
 | Config | Target | Notes |
 |--------|--------|-------|
-| **nvim** | `~/.config/nvim/` | Lazy.nvim, LSP, Telescope, Treesitter, Harpoon |
+| **nvim** | `~/.config/nvim/` | Lazy.nvim, native LSP (`vim.lsp.config`), Telescope, Treesitter, Harpoon, Verilog (hdl_checker) |
 | **zsh** | `~/.zshrc` | Template with OS conditionals |
 | **tmux** | `~/.config/tmux/tmux.conf` | Catppuccin, vim-tmux-navigator, TPM |
 | **starship** | `~/.config/starship.toml` | Template: gradient theme (macOS) / nerd font symbols (Linux) |
@@ -29,6 +29,14 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply linrswa
 
 - **macOS**: Homebrew plugin paths, `bat`, conda, fzf via `source <(fzf --zsh)`
 - **Linux**: System package paths, `batcat`, Ghostty term fix, fzf via `source ~/.fzf.zsh`
+
+## Sync Helper
+
+```bash
+./sync.sh
+```
+
+Detects new files in chezmoi-managed directories, offers to add them, then runs `chezmoi re-add` to sync target changes back to the source.
 
 ## Externally Managed
 
