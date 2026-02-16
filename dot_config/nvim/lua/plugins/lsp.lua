@@ -28,36 +28,39 @@ return {
         },
       },
     },
-    opts = {
-      servers = {
-        lua_ls = {},
-        dockerls = {},
-        bashls = {
-          filetypes = { "bash", "zsh", "sh" },
-        },
-        pyright = {
-          settings = {
-            python = {
-              pythonPath = vim.fn.exepath("python"),
-            },
+    config = function()
+      vim.lsp.config('*', {
+        capabilities = require('blink.cmp').get_lsp_capabilities(),
+      })
+      vim.lsp.config('bashls', {
+        filetypes = { "bash", "zsh", "sh" },
+      })
+      vim.lsp.config('pyright', {
+        settings = {
+          python = {
+            pythonPath = vim.fn.exepath("python"),
           },
         },
-        clangd = {},
-        cmake = {},
-      },
-    },
-    config = function(_, opts)
-      local lspconfig = require("lspconfig")
-      for server, config in pairs(opts.servers) do
-        config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
-        lspconfig[server].setup(config)
-      end
+      })
+      vim.lsp.enable({ 'lua_ls', 'dockerls', 'bashls', 'pyright', 'clangd', 'cmake', 'hdl_checker' })
+
       require('render-markdown').setup({
         completions = { blink = { enabled = true } },
       })
-      vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-      vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, {})
-      vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, {})
+      vim.api.nvim_create_autocmd('LspAttach', {
+        callback = function(args)
+          local buf = args.buf
+          local ft = vim.bo[buf].filetype
+          local opts = { buffer = buf }
+          -- Verilog LSPs don't support intra-file go-to-definition well,
+          -- so keep Vim's built-in gd for local declaration jump.
+          if ft ~= "verilog" and ft ~= "systemverilog" then
+            vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+          end
+          vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
+          vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
+        end,
+      })
     end,
   },
   {
