@@ -42,7 +42,7 @@ return {
           },
         },
       })
-      vim.lsp.enable({ 'lua_ls', 'dockerls', 'bashls', 'pyright', 'clangd', 'cmake', 'hdl_checker' })
+      vim.lsp.enable({ 'lua_ls', 'dockerls', 'bashls', 'pyright', 'clangd', 'cmake' })
 
       require('render-markdown').setup({
         completions = { blink = { enabled = true } },
