@@ -1,5 +1,11 @@
 require("config.lazy")
 
+vim.filetype.add({
+    extension = {
+        v = "verilog",
+    },
+})
+
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.opt.shiftwidth = 4

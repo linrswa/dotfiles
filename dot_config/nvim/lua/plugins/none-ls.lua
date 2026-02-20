@@ -26,7 +26,9 @@ return {
         null_ls.builtins.formatting.shfmt.with({ extra_args = { "-i", "4" } }),
         null_ls.builtins.diagnostics.hadolint,
         null_ls.builtins.formatting.clang_format,
-        null_ls.builtins.formatting.verible_verilog_format,
+        null_ls.builtins.formatting.verible_verilog_format.with({
+          args = { "--indentation_spaces", "4", "--stdin_name", "$FILENAME", "-" },
+        }),
         {
           name = "verilator",
           method = null_ls.methods.DIAGNOSTICS,

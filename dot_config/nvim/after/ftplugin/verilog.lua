@@ -1,3 +1,7 @@
+vim.opt_local.expandtab = true
+vim.opt_local.shiftwidth = 4
+vim.opt_local.tabstop = 4
+
 -- Custom gd for Verilog: search from top of file for first occurrence of <cword>
 vim.keymap.set("n", "gd", function()
   local word = vim.fn.expand('<cword>')
