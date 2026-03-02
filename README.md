@@ -16,12 +16,14 @@ Personal dotfiles managed by [chezmoi](https://www.chezmoi.io/), with OS-specifi
 ## Setup
 
 ```bash
-# Install chezmoi and apply all configs
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply linrswa
+# Install chezmoi to ~/.local/bin and apply all configs
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/.local/bin init --apply linrswa
 
 # Install tmux plugins (first run)
 # Open tmux, then press prefix + I
 ```
+
+`-b ~/.local/bin` 讓 chezmoi 安裝到 PATH 中，之後可以直接使用 `chezmoi` 指令。
 
 `chezmoi init <username>` 會自動展開成 `https://github.com/<username>/dotfiles.git`（命名規則），不需要手動 `git clone`。如果 repo 名稱不是 `dotfiles`，需要給完整 URL。
 
