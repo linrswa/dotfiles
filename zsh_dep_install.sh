@@ -10,14 +10,17 @@
 #   lsd         - ls replacement (alias ls)
 #   lazygit     - git TUI (alias lg)
 #   bat         - cat replacement (alias cat)
-#   neovim      - editor (alias vim/vi)
+#   tmux        - terminal multiplexer
+#   neovim      - editor (alias vim/vi), GitHub release for latest version
 
 set -e
+
+mkdir -p ~/.local/bin
 
 if [[ "$(uname)" == "Darwin" ]]; then
   echo "Detected macOS, using Homebrew..."
   brew install starship fzf zsh-syntax-highlighting zsh-autosuggestions \
-               mise lsd lazygit bat neovim
+               mise lsd lazygit bat neovim tmux
 else
   echo "Detected Linux..."
 
@@ -37,16 +40,31 @@ else
   echo "Installing mise..."
   curl https://mise.run | sh
 
-  # lsd, lazygit, bat, neovim
-  echo "Installing lsd, lazygit, bat, neovim..."
-  sudo apt install -y lsd bat neovim
+  # lsd, lazygit, bat, tmux
+  echo "Installing lsd, bat, tmux..."
+  sudo apt install -y lsd bat tmux
+
+  # detect architecture
+  ARCH=$(uname -m)
+  case "$ARCH" in
+    x86_64)  NVIM_ARCH="x86_64"; LG_ARCH="x86_64" ;;
+    aarch64) NVIM_ARCH="arm64";  LG_ARCH="arm64" ;;
+    *)       echo "Unsupported architecture: $ARCH"; exit 1 ;;
+  esac
 
   # lazygit (not in default apt repos, install from GitHub)
+  echo "Installing lazygit..."
   LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
-  curl -Lo /tmp/lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+  curl -Lo /tmp/lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_${LG_ARCH}.tar.gz"
   tar xf /tmp/lazygit.tar.gz -C /tmp lazygit
-  sudo install /tmp/lazygit /usr/local/bin
+  install /tmp/lazygit ~/.local/bin
   rm /tmp/lazygit /tmp/lazygit.tar.gz
+
+  # neovim (install from GitHub for latest version)
+  echo "Installing neovim..."
+  curl -Lo /tmp/nvim.tar.gz "https://github.com/neovim/neovim/releases/latest/download/nvim-linux-${NVIM_ARCH}.tar.gz"
+  tar xzf /tmp/nvim.tar.gz -C ~/.local --strip-components=1
+  rm /tmp/nvim.tar.gz
 fi
 
 echo "Done! All .zshrc dependencies installed."
