@@ -27,29 +27,13 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/.local/bin init --apply linrswa
 
 ### Dependencies
 
-chezmoi 只管設定檔，以下套件需要另外安裝：
-
-**macOS (Homebrew):**
+chezmoi 只管設定檔，`.zshrc` 用到的套件需要另外安裝。可以用腳本一鍵安裝：
 
 ```bash
-brew install starship fzf zsh-syntax-highlighting zsh-autosuggestions mise
+./zsh_dep_install.sh
 ```
 
-**Linux (Ubuntu/Debian):**
-
-```bash
-# starship
-curl -sS https://starship.rs/install.sh | sh
-
-# fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
-
-# zsh plugins
-sudo apt install zsh-syntax-highlighting zsh-autosuggestions
-
-# mise
-curl https://mise.run | sh
-```
+會安裝：starship, fzf, zsh-syntax-highlighting, zsh-autosuggestions, mise, lsd, lazygit, bat, neovim（自動偵測 macOS/Linux）。
 
 `chezmoi init <username>` 會自動展開成 `https://github.com/<username>/dotfiles.git`（命名規則），不需要手動 `git clone`。如果 repo 名稱不是 `dotfiles`，需要給完整 URL。
 
