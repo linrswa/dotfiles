@@ -25,6 +25,32 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/.local/bin init --apply linrswa
 
 `-b ~/.local/bin` 讓 chezmoi 安裝到 PATH 中，之後可以直接使用 `chezmoi` 指令。
 
+### Dependencies
+
+chezmoi 只管設定檔，以下套件需要另外安裝：
+
+**macOS (Homebrew):**
+
+```bash
+brew install starship fzf zsh-syntax-highlighting zsh-autosuggestions mise
+```
+
+**Linux (Ubuntu/Debian):**
+
+```bash
+# starship
+curl -sS https://starship.rs/install.sh | sh
+
+# fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+
+# zsh plugins
+sudo apt install zsh-syntax-highlighting zsh-autosuggestions
+
+# mise
+curl https://mise.run | sh
+```
+
 `chezmoi init <username>` 會自動展開成 `https://github.com/<username>/dotfiles.git`（命名規則），不需要手動 `git clone`。如果 repo 名稱不是 `dotfiles`，需要給完整 URL。
 
 | 指令 | 作用 |
