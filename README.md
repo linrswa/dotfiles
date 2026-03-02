@@ -25,6 +25,12 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/.local/bin init --apply linrswa
 
 `-b ~/.local/bin` 讓 chezmoi 安裝到 PATH 中，之後可以直接使用 `chezmoi` 指令。
 
+已經 init 過的機器，拉取最新設定並套用：
+
+```bash
+chezmoi update
+```
+
 ### Dependencies
 
 chezmoi 只管設定檔，`.zshrc` 用到的套件需要另外安裝。可以用腳本一鍵安裝：
