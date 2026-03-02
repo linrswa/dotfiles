@@ -16,11 +16,48 @@ Personal dotfiles managed by [chezmoi](https://www.chezmoi.io/), with OS-specifi
 ## Setup
 
 ```bash
-# Install chezmoi and apply
+# Install chezmoi and apply all configs
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply linrswa
 
 # Install tmux plugins (first run)
 # Open tmux, then press prefix + I
+```
+
+`chezmoi init <username>` 會自動展開成 `https://github.com/<username>/dotfiles.git`（命名規則），不需要手動 `git clone`。如果 repo 名稱不是 `dotfiles`，需要給完整 URL。
+
+| 指令 | 作用 |
+|------|------|
+| `chezmoi init linrswa` | 只 clone repo 到 `~/.local/share/chezmoi/`，不套用 |
+| `chezmoi init --apply linrswa` | clone + 立刻套用所有設定 |
+
+## Apply Individual Packages
+
+不需要套用全部設定，可以用 `chezmoi apply` 指定路徑只套用單一套件：
+
+```bash
+# 只套用 nvim
+chezmoi apply ~/.config/nvim
+
+# 只套用 tmux
+chezmoi apply ~/.config/tmux
+
+# 只套用 zsh
+chezmoi apply ~/.zshrc
+
+# 只套用 starship
+chezmoi apply ~/.config/starship.toml
+
+# 只套用 aerospace
+chezmoi apply ~/.config/aerospace
+
+# 只套用 claude
+chezmoi apply ~/.claude
+```
+
+套用前可以先用 `chezmoi diff` 預覽變更：
+
+```bash
+chezmoi diff ~/.config/nvim
 ```
 
 ## OS-Specific Templates
