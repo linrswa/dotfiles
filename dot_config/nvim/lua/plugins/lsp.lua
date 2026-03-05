@@ -11,6 +11,9 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = { "lua_ls", "dockerls", "pyright", "bashls", "clangd", "cmake" },
         automatic_installation = true,
+        automatic_enable = {
+          exclude = { "verible" },
+        },
       })
     end,
   },

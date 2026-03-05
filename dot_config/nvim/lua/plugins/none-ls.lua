@@ -37,7 +37,7 @@ return {
             command = "verilator",
             args = function(params)
               local dir = vim.fn.fnamemodify(params.bufname, ":h")
-              return { "-lint-only", "-Wno-fatal", "-I" .. dir, "$FILENAME" }
+              return { "-lint-only", "-language", "1364-2005", "-Wno-fatal", "-Wno-WIDTH", "-I" .. dir, "$FILENAME" }
             end,
             to_temp_file = true,
             from_stderr = true,

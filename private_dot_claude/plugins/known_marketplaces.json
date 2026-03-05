@@ -5,14 +5,14 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "/home/linrswa/.claude/plugins/marketplaces/claude-plugins-official",
-    "lastUpdated": "2026-03-01T04:15:32.315Z"
+    "lastUpdated": "2026-03-05T16:53:49.190Z"
   },
   "local": {
     "source": {
       "source": "directory",
-      "path": "/home/linrswa/.claude/marketplaces/local"
+      "path": "/Users/rswa/Dev/agent/my-marketplace"
     },
-    "installLocation": "/home/linrswa/.claude/marketplaces/local",
-    "lastUpdated": "2026-02-12T05:03:07.488Z"
+    "installLocation": "/Users/rswa/Dev/agent/my-marketplace",
+    "lastUpdated": "2026-03-03T07:54:45.418Z"
   }
 }
