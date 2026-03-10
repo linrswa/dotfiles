@@ -50,24 +50,24 @@
         "gitCommitSha": "27d2b86d72da27c64585150857cee8472ad47abb"
       }
     ],
-    "ralph@local": [
+    "ralph@ralph-in-claude": [
       {
         "scope": "user",
-        "installPath": "/Users/rswa/.claude/plugins/cache/local/ralph/0.4.4",
+        "installPath": "/Users/rswa/.claude/plugins/cache/ralph-in-claude/ralph/0.4.4",
         "version": "0.4.4",
-        "installedAt": "2026-03-03T07:58:33.313Z",
-        "lastUpdated": "2026-03-03T07:58:33.313Z",
-        "gitCommitSha": "ab3c8bc0dac571424bffa8f5e2379dcbf30ebf77"
+        "installedAt": "2026-03-06T05:49:59.080Z",
+        "lastUpdated": "2026-03-06T05:49:59.080Z",
+        "gitCommitSha": "2b54dfc5675616442157605716761a16c130cc0c"
       }
     ],
-    "doc-agent@local": [
+    "doc-agent@doc-agent": [
       {
         "scope": "user",
-        "installPath": "/Users/rswa/.claude/plugins/cache/local/doc-agent/0.4.0",
+        "installPath": "/Users/rswa/.claude/plugins/cache/doc-agent/doc-agent/0.4.0",
         "version": "0.4.0",
-        "installedAt": "2026-03-03T07:58:48.092Z",
-        "lastUpdated": "2026-03-03T07:58:48.092Z",
-        "gitCommitSha": "68a7d66b47ebabcbd0444d1e7438a9d504fed77a"
+        "installedAt": "2026-03-06T05:49:59.494Z",
+        "lastUpdated": "2026-03-06T05:49:59.494Z",
+        "gitCommitSha": "1db98a56f1278c315574510509867b0b1b506679"
       }
     ]
   }

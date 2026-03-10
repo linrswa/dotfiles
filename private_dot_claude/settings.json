@@ -8,14 +8,20 @@
     "context7@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
     "code-simplifier@claude-plugins-official": true,
-    "ralph@local": true,
-    "doc-agent@local": true
+    "ralph@ralph-in-claude": true,
+    "doc-agent@doc-agent": true
   },
   "extraKnownMarketplaces": {
-    "local": {
+    "ralph-in-claude": {
       "source": {
-        "source": "directory",
-        "path": "/Users/rswa/Dev/agent/my-marketplace"
+        "source": "github",
+        "repo": "linrswa/ralph-in-claude"
+      }
+    },
+    "doc-agent": {
+      "source": {
+        "source": "github",
+        "repo": "linrswa/doc-agent"
       }
     }
   },
