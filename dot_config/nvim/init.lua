@@ -30,7 +30,7 @@ if vim.env.SSH_TTY then
     },
   }
 
-  vim.opt.clipboard = "unnamedplus"
+  vim.opt.clipboard = ""
 else
   vim.opt.clipboard = "unnamedplus"
 end
