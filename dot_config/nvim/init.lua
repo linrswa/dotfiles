@@ -1,15 +1,14 @@
 require("config.lazy")
 
 vim.filetype.add({
-    extension = {
-        v = "verilog",
-    },
+  extension = {
+    v = "verilog",
+  },
 })
 
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.opt.shiftwidth = 4
-vim.opt.clipboard = "unnamedplus"
 
 -- Use OSC52 for clipboard when connected via SSH
 if vim.env.SSH_TTY then
@@ -25,7 +24,12 @@ if vim.env.SSH_TTY then
       ["*"] = osc52.paste("*"),
     },
   }
+
+  vim.opt.clipboard = "unnamedplus"
+else
+  vim.opt.clipboard = "unnamedplus"
 end
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 

@@ -8,7 +8,7 @@ return {
     require("mason-null-ls").setup({
       ensure_installed = {
         "ruff",
-        "perttier",
+        "prettier",
         "shfmt",
       },
       automatic_install = true,
