@@ -51,8 +51,11 @@ alias cat='bat'
 alias cleanXcode='rm -rf ~/Library/Developer/Xcode/DerivedData'
 alias server='ssh server'
 alias ccpass='claude --dangerously-skip-permissions'
+alias ta='tmux attach -t'
 {{- else }}
 alias cat='batcat'
+alias ccpass='claude --dangerously-skip-permissions'
+alias ta='tmux attach -t'
 {{- end }}
 
 {{- if eq .chezmoi.os "darwin" }}
