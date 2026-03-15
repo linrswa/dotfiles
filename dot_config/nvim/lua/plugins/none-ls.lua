@@ -32,7 +32,7 @@ return {
         {
           name = "verilator",
           method = null_ls.methods.DIAGNOSTICS,
-          filetypes = { "verilog", "systemverilog" },
+          filetypes = { "verilog" },
           generator = require("null-ls.helpers").generator_factory({
             command = "verilator",
             args = function(params)
