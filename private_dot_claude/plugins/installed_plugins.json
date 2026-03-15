@@ -1,65 +1,6 @@
 {
   "version": 2,
   "plugins": {
-    "github@claude-plugins-official": [
-      {
-        "scope": "user",
-        "installPath": "/home/linrswa/.claude/plugins/cache/claude-plugins-official/github/2cd88e7947b7",
-        "version": "2cd88e7947b7",
-        "installedAt": "2026-01-08T10:40:47.490Z",
-        "lastUpdated": "2026-02-07T08:47:53.648Z"
-      }
-    ],
-    "frontend-design@claude-plugins-official": [
-      {
-        "scope": "user",
-        "installPath": "/home/linrswa/.claude/plugins/cache/claude-plugins-official/frontend-design/2cd88e7947b7",
-        "version": "2cd88e7947b7",
-        "installedAt": "2026-01-26T05:53:40.846Z",
-        "lastUpdated": "2026-02-07T08:47:53.653Z",
-        "gitCommitSha": "e30768372b4150ca1bc0839d93283e8edc30d60d"
-      }
-    ],
-    "context7@claude-plugins-official": [
-      {
-        "scope": "user",
-        "installPath": "/home/linrswa/.claude/plugins/cache/claude-plugins-official/context7/2cd88e7947b7",
-        "version": "2cd88e7947b7",
-        "installedAt": "2026-01-30T02:34:11.161Z",
-        "lastUpdated": "2026-02-07T08:47:53.662Z",
-        "gitCommitSha": "27d2b86d72da27c64585150857cee8472ad47abb"
-      }
-    ],
-    "code-review@claude-plugins-official": [
-      {
-        "scope": "user",
-        "installPath": "/home/linrswa/.claude/plugins/cache/claude-plugins-official/code-review/2cd88e7947b7",
-        "version": "2cd88e7947b7",
-        "installedAt": "2026-01-30T02:36:21.083Z",
-        "lastUpdated": "2026-02-07T08:47:53.657Z",
-        "gitCommitSha": "27d2b86d72da27c64585150857cee8472ad47abb"
-      }
-    ],
-    "code-simplifier@claude-plugins-official": [
-      {
-        "scope": "user",
-        "installPath": "/home/linrswa/.claude/plugins/cache/claude-plugins-official/code-simplifier/1.0.0",
-        "version": "1.0.0",
-        "installedAt": "2026-01-30T02:36:32.117Z",
-        "lastUpdated": "2026-01-30T02:36:32.117Z",
-        "gitCommitSha": "27d2b86d72da27c64585150857cee8472ad47abb"
-      }
-    ],
-    "ralph@ralph-in-claude": [
-      {
-        "scope": "user",
-        "installPath": "/Users/rswa/.claude/plugins/cache/ralph-in-claude/ralph/0.4.4",
-        "version": "0.4.4",
-        "installedAt": "2026-03-06T05:49:59.080Z",
-        "lastUpdated": "2026-03-06T05:49:59.080Z",
-        "gitCommitSha": "2b54dfc5675616442157605716761a16c130cc0c"
-      }
-    ],
     "doc-agent@doc-agent": [
       {
         "scope": "user",
@@ -68,6 +9,16 @@
         "installedAt": "2026-03-06T05:49:59.494Z",
         "lastUpdated": "2026-03-06T05:49:59.494Z",
         "gitCommitSha": "1db98a56f1278c315574510509867b0b1b506679"
+      }
+    ],
+    "ralph@ralph-in-claude": [
+      {
+        "scope": "user",
+        "installPath": "/Users/rswa/.claude/plugins/cache/ralph-in-claude/ralph/0.4.7",
+        "version": "0.4.7",
+        "installedAt": "2026-03-13T08:51:47.572Z",
+        "lastUpdated": "2026-03-13T09:03:52.949Z",
+        "gitCommitSha": "2b54dfc5675616442157605716761a16c130cc0c"
       }
     ]
   }

@@ -1,19 +1,11 @@
 {
-  "claude-plugins-official": {
-    "source": {
-      "source": "github",
-      "repo": "anthropics/claude-plugins-official"
-    },
-    "installLocation": "/home/linrswa/.claude/plugins/marketplaces/claude-plugins-official",
-    "lastUpdated": "2026-03-10T09:20:14.789Z"
-  },
   "ralph-in-claude": {
     "source": {
       "source": "github",
       "repo": "linrswa/ralph-in-claude"
     },
     "installLocation": "/Users/rswa/.claude/plugins/marketplaces/ralph-in-claude",
-    "lastUpdated": "2026-03-06T05:49:53.265Z"
+    "lastUpdated": "2026-03-13T09:03:47.686Z"
   },
   "doc-agent": {
     "source": {

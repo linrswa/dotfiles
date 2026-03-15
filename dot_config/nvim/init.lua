@@ -10,6 +10,22 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 vim.opt.shiftwidth = 4
 vim.opt.clipboard = "unnamedplus"
+
+-- Use OSC52 for clipboard when connected via SSH
+if vim.env.SSH_TTY then
+  local osc52 = require("vim.ui.clipboard.osc52")
+  vim.g.clipboard = {
+    name = "OSC 52",
+    copy = {
+      ["+"] = osc52.copy("+"),
+      ["*"] = osc52.copy("*"),
+    },
+    paste = {
+      ["+"] = osc52.paste("+"),
+      ["*"] = osc52.paste("*"),
+    },
+  }
+end
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
