@@ -21,5 +21,9 @@
     }
   },
   "voiceEnabled": true,
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  }
 }
