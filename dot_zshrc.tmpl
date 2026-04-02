@@ -48,38 +48,22 @@ alias vim='nvim'
 alias vi='nvim'
 alias v='nvim'
 alias j='just'
+alias ta='tmux attach -t'
+alias ccpass='claude --dangerously-skip-permissions'
+
 {{- if eq .chezmoi.os "darwin" }}
 alias cat='bat'
 alias cleanXcode='rm -rf ~/Library/Developer/Xcode/DerivedData'
 alias server='ssh server'
 alias homelab='ssh homelab'
-alias ccpass='claude --dangerously-skip-permissions'
-alias ta='tmux attach -t'
 {{- else }}
 alias cat='batcat'
-alias ccpass='claude --dangerously-skip-permissions'
-alias ta='tmux attach -t'
 {{- end }}
 
-{{- if eq .chezmoi.os "darwin" }}
-
-export VCPKG_ROOT="/Users/rswa/vcpkg"
-export PATH="$VCPKG_ROOT:$PATH"
-export DISPLAY=:0
-{{- end }}
+export CLAUDE_CODE_NO_FLICKER=1
 eval "$(mise activate zsh)"
-{{- if eq .chezmoi.os "darwin" }}
 
+{{- if eq .chezmoi.os "darwin" }}
 . "$HOME/.local/bin/env"
 eval "$(uv generate-shell-completion zsh)"
-eval "$(uv generate-shell-completion zsh)"
-export PATH=/Library/Frameworks/GStreamer.framework/Versions/Current/bin:$PATH
-
-
-# bun completions
-[ -s "/Users/rswa/.bun/_bun" ] && source "/Users/rswa/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 {{- end }}
