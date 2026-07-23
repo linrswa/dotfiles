@@ -20,7 +20,7 @@ mkdir -p ~/.local/bin
 if [[ "$(uname)" == "Darwin" ]]; then
   echo "Detected macOS, using Homebrew..."
   brew install starship fzf zsh-syntax-highlighting zsh-autosuggestions \
-               mise lsd lazygit bat neovim tmux
+               mise lsd lazygit bat neovim tmux stow
 else
   echo "Detected Linux..."
 
@@ -40,9 +40,9 @@ else
   echo "Installing mise..."
   curl https://mise.run | sh
 
-  # lsd, lazygit, bat, tmux
-  echo "Installing lsd, bat, tmux..."
-  sudo apt install -y lsd bat tmux
+  # lsd, lazygit, bat, tmux, stow
+  echo "Installing lsd, bat, tmux, stow..."
+  sudo apt install -y lsd bat tmux stow
 
   # detect architecture
   ARCH=$(uname -m)
